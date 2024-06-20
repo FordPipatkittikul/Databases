@@ -4,6 +4,8 @@
 
 Database is basiclly some computer with database software on top.
 
+**Schema** : defines the structure of the database. It includes the definitions of tables, columns, data types, indexes, views, and other database objects.
+
 **query** is a way to communicate with databases. Queries are used to retrieve and manipulate data stored in a database.
 
 **DataBase Management System(DBMS)** is a software or its program that is used to manage the database. It receives instructions from somebody like us that want something to do with data and instructs the database the way we want
