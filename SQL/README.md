@@ -81,3 +81,7 @@ SELECT column as 'new name'
 2) CONCAT() you can CONCAT(text1, text2) or CONCAT(column1, column2)
 
 SELECT CONCAT(emp_no, ' is a ', title) AS "Employee Title" FROM titles
+
+## function in query syntax
+1) Aggregate function run all of the data and produce one output. Like SUM()
+2) Scalar function run each individual row and produce multiple output. Like CONCAT()
