@@ -75,5 +75,6 @@ quick note SQL statement and query are the same
 # QUERY syntax
 
 Renaming a columns
-SELECT column as '<new name>'
+
+SELECT column as 'new name'
 
