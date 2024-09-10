@@ -72,27 +72,27 @@ quick note SQL statement and query are the same
 
     - A database is being used to drive statistics for reporting to the executives.
 
-# QUERY syntax
+# QUERY Syntax
 
-1) Renaming a columns
-
-SELECT column as 'new name'
-
-2) CONCAT() you can CONCAT(text1, text2) or CONCAT(column1, column2)
-
-SELECT CONCAT(emp_no, ' is a ', title) AS "Employee Title" FROM titles
+    1) Renaming a columns
+    SELECT column as 'new name'
+    2) CONCAT() you can CONCAT(text1, text2) or CONCAT(column1, column2)
+    SELECT CONCAT(emp_no, ' is a ', title) AS "Employee Title" FROM titles
 
 ## Function in query syntax
 
-1) Aggregate function run all of the data and produce one output. Like SUM()
-2) Scalar function run each individual row and produce multiple output. Like CONCAT()
+    1) Aggregate function run all of the data and produce one output. Like SUM()
+    2) Scalar function run each individual row and produce multiple output. Like CONCAT()
 
 ## Filtering
     SELECT first_name,last_name,hire_date FROM employees
     WHERE (first_name = 'Georgi' AND last_name = 'Facello' AND hire_date = '1986-06-26') 
     OR (first_name = 'Bezalel' AND last_name = 'Simmel');
-    -- AND, OR, NOT
+    
+    -- AND, OR, NOT, comparison operators
     -- when we do filtering when we do where cause. There is an order of filtering
+![Screenshot (131)](https://github.com/user-attachments/assets/9e3e27f8-de58-42e9-8ab3-728018d8ac48)
+
 ## Commenting
 
      --select statement to filter Mayumi Schueller
@@ -105,4 +105,4 @@ SELECT CONCAT(emp_no, ' is a ', title) AS "Employee Title" FROM titles
     
 ## Common mistakes
 
-1) ' ' for you to write **TEXT** in sql, " " is for **TABLES** 
+     ' ' for you to write **TEXT** in sql, " " is for **TABLES** 
