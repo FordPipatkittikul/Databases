@@ -82,6 +82,27 @@ SELECT column as 'new name'
 
 SELECT CONCAT(emp_no, ' is a ', title) AS "Employee Title" FROM titles
 
-## function in query syntax
+## Function in query syntax
+
 1) Aggregate function run all of the data and produce one output. Like SUM()
 2) Scalar function run each individual row and produce multiple output. Like CONCAT()
+
+## Filtering
+    SELECT first_name,last_name,hire_date FROM employees
+    WHERE (first_name = 'Georgi' AND last_name = 'Facello' AND hire_date = '1986-06-26') 
+    OR (first_name = 'Bezalel' AND last_name = 'Simmel');
+    -- AND, OR, NOT
+    -- when we do filtering when we do where cause. There is an order of filtering
+## Commenting
+
+     --select statement to filter Mayumi Schueller
+    SELECT first_name,last_name AS "Full Name" FROM employees
+    /*
+    filter on first_name AND last_name 
+    and focus filtering on first_name is 'Mayumi' AND last_name is 'Schueller'
+    */ 
+    WHERE first_name = 'Mayumi' AND last_name = 'Schueller';
+    
+## Common mistakes
+
+1) ' ' for you to write **TEXT** in sql, " " is for **TABLES** 
