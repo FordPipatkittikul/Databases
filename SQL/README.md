@@ -71,3 +71,9 @@ quick note SQL statement and query are the same
     - A database is being used to figure out what new products we should offer.
 
     - A database is being used to drive statistics for reporting to the executives.
+
+# QUERY syntax
+
+Renaming a columns
+SELECT column as '<new name>'
+
