@@ -4,6 +4,9 @@ SQL is a devlarative language(langauage that we are stating what will happen)
 
 testing query: https://www.db-fiddle.com/f/ogAiTgZPjwvDxwVHiVK3Ek/0
 
+# Schema
+A database schema defines how data is organized within a relational database; this is inclusive of logical constraints such as, table names, fields, data types and the relationships between these entities.
+
 # QUERY BREAKDOWN
 quick note SQL statement and query are the same
 
