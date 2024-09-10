@@ -74,7 +74,10 @@ quick note SQL statement and query are the same
 
 # QUERY syntax
 
-Renaming a columns
+1) Renaming a columns
 
 SELECT column as 'new name'
 
+2) CONCAT() you can CONCAT(text1, text2) or CONCAT(column1, column2)
+
+SELECT CONCAT(emp_no, ' is a ', title) AS "Employee Title" FROM titles
