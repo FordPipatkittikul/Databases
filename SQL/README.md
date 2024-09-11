@@ -103,6 +103,9 @@ quick note SQL statement and query are the same
     */ 
     WHERE first_name = 'Mayumi' AND last_name = 'Schueller';
     
+## NULL
+    IS: a keyword that we can use to filter NULL. other comparison operators cannot Filtering.
+    
 ## Common mistakes
 
      ' ' for you to write **TEXT** in sql, " " is for **TABLES** 
