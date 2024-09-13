@@ -89,9 +89,23 @@ quick note SQL statement and query are the same
     WHERE (first_name = 'Georgi' AND last_name = 'Facello' AND hire_date = '1986-06-26') 
     OR (first_name = 'Bezalel' AND last_name = 'Simmel');
     
-    -- AND, OR, NOT, comparison operators
+    -- AND, OR, NOT, comparison operators(https://www.w3schools.com/sql/sql_operators.asp)
+       , BETWEEN AND, IN(https://www.w3schools.com/sql/sql_in.asp)
+       , LIKE(https://www.w3schools.com/sql/sql_like.asp)
+       
     -- when we do filtering when we do where cause. There is an order of filtering
 ![Screenshot (131)](https://github.com/user-attachments/assets/9e3e27f8-de58-42e9-8ab3-728018d8ac48)
+
+### NULL
+    IS
+        a keyword that we can use to filter NULL. other comparison operators cannot Filtering.
+        NULL = NULL  will return NULL not TRUE OR FALSE. NULL IS NULL will return TRUE.
+    COALESCE 
+        SELECT COALESCE(name, 'no name available') FROM Student;    -- COALESCE returns the first non-null value in a list and replace Null value with fallback argument
+    testing: https://www.db-fiddle.com/f/PnGNcaPYfGoEDvfexzEUA/1313
+    
+### Three-Valued Logic
+    Besides TRUE and FALSE, the result or logical expressions can also be UNKNOWN
 
 ### Commenting
 
@@ -103,12 +117,6 @@ quick note SQL statement and query are the same
     */ 
     WHERE first_name = 'Mayumi' AND last_name = 'Schueller';
     
-### NULL
-    IS
-        a keyword that we can use to filter NULL. other comparison operators cannot Filtering.
-    COALESCE 
-        SELECT COALESCE(name, 'no name available') FROM Student;    -- COALESCE returns the first non-null value in a list and replace Null value with fallback argument
-    
 ### Common mistakes
 
-     ' ' for you to write **TEXT** in sql, " " is for **TABLES** 
+     ' ' for you to write TEXT in sql, " " is for TABLES. 
