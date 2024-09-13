@@ -16,12 +16,12 @@ quick note SQL statement and query are the same
 
 # Relational Model
 
-## Tables
+### Tables
 
     tables is representation of that object. It is collection of columns and rows
 ![Tables](table.png)
 
-## Column
+### Column
 
     Each column represent specific type of data.
 
@@ -30,7 +30,7 @@ quick note SQL statement and query are the same
     Attribute domain/Constraint: is what column can store.
 ![Column](Columns.png)
 
-## Row
+### Row
 
     Each of single row is a piece of data that represent one single piece data of that table
 
@@ -42,11 +42,11 @@ quick note SQL statement and query are the same
 ![Row](Rows.png)
 
 
-## Primary key
+### Primary key
 
     Primary key is something that uniquely identifies data.
 
-## Foriegn key
+### Foriegn key
 
     Foriegn key references the primary key of a different table.
 
@@ -79,12 +79,12 @@ quick note SQL statement and query are the same
     2) CONCAT() you can CONCAT(text1, text2) or CONCAT(column1, column2)
     SELECT CONCAT(emp_no, ' is a ', title) AS "Employee Title" FROM titles
 
-## Function in query syntax
+### Function in query syntax
 
     1) Aggregate function run all of the data and produce one output. Like SUM()
     2) Scalar function run each individual row and produce multiple output. Like CONCAT()
 
-## Filtering
+### Filtering
     SELECT first_name,last_name,hire_date FROM employees
     WHERE (first_name = 'Georgi' AND last_name = 'Facello' AND hire_date = '1986-06-26') 
     OR (first_name = 'Bezalel' AND last_name = 'Simmel');
@@ -93,7 +93,7 @@ quick note SQL statement and query are the same
     -- when we do filtering when we do where cause. There is an order of filtering
 ![Screenshot (131)](https://github.com/user-attachments/assets/9e3e27f8-de58-42e9-8ab3-728018d8ac48)
 
-## Commenting
+### Commenting
 
      --select statement to filter Mayumi Schueller
     SELECT first_name,last_name AS "Full Name" FROM employees
@@ -103,9 +103,12 @@ quick note SQL statement and query are the same
     */ 
     WHERE first_name = 'Mayumi' AND last_name = 'Schueller';
     
-## NULL
-    IS: a keyword that we can use to filter NULL. other comparison operators cannot Filtering.
+### NULL
+    IS
+        a keyword that we can use to filter NULL. other comparison operators cannot Filtering.
+    COALESCE 
+        SELECT COALESCE(name, 'no name available') FROM Student;    -- COALESCE returns the first non-null value in a list and replace Null value with fallback argument
     
-## Common mistakes
+### Common mistakes
 
      ' ' for you to write **TEXT** in sql, " " is for **TABLES** 
