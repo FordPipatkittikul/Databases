@@ -1,4 +1,4 @@
-# SQL
+# PostgreSQL
 
 SQL is a devlarative language(langauage that we are stating what will happen)
 
@@ -91,7 +91,7 @@ quick note SQL statement and query are the same
     
     -- AND, OR, NOT, comparison operators(https://www.w3schools.com/sql/sql_operators.asp)
        , BETWEEN AND, IN(https://www.w3schools.com/sql/sql_in.asp)
-       , LIKE(https://www.w3schools.com/sql/sql_like.asp)
+       , LIKE(https://www.w3schools.com/sql/sql_like.asp) in PostgreSQL only with text comparision, ILIKE is same as like but case insensitive matching
        
     -- when we do filtering when we do where cause. There is an order of filtering
 ![Screenshot (131)](https://github.com/user-attachments/assets/9e3e27f8-de58-42e9-8ab3-728018d8ac48)
