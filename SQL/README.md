@@ -96,6 +96,14 @@ quick note SQL statement and query are the same
     -- when we do filtering when we do where cause. There is an order of filtering
 ![Screenshot (131)](https://github.com/user-attachments/assets/9e3e27f8-de58-42e9-8ab3-728018d8ac48)
 
+### Date & Timezones
+    https://www.w3schools.com/Sql/sql_dates.asp
+    DATE
+        convert a date to a date format. 
+        SELECT DATE '1800/01/01'
+    Intervals: https://www.javatpoint.com/mysql-interval
+        It can store and manipulate a period of time in Years, Months, Days, Hours, Minutes, Seconds.
+        
 ### NULL
     IS
         a keyword that we can use to filter NULL. other comparison operators cannot Filtering.
