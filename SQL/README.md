@@ -112,7 +112,7 @@ testing query: https://www.db-fiddle.com/f/ogAiTgZPjwvDxwVHiVK3Ek/0
     WHERE a.emp_no = b.emp_no
     ORDER BY a.emp_no
 
-    As we can see the most common approach is link primary key to foreign key.
+    As we can see the most common approach to join data is link primary key to foreign key.
 
 ### Date & Timezones
     https://www.w3schools.com/Sql/sql_dates.asp
