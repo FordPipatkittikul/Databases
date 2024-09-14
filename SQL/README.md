@@ -76,6 +76,7 @@ quick note SQL statement and query are the same
 
     1) Renaming a columns
     SELECT column as 'new name'
+    
     2) CONCAT() you can CONCAT(text1, text2) or CONCAT(column1, column2)
     SELECT CONCAT(emp_no, ' is a ', title) AS "Employee Title" FROM titles
 
@@ -95,6 +96,24 @@ quick note SQL statement and query are the same
        
     -- when we do filtering when we do where cause. There is an order of filtering
 ![Screenshot (131)](https://github.com/user-attachments/assets/9e3e27f8-de58-42e9-8ab3-728018d8ac48)
+
+### soritng data
+    SELECT * FROM customers
+    ORDER BY <column> ASC;
+
+    SELECT * FROM customers
+    ORDER BY <column> DESC;
+
+    SELECT  first_name, last_name FROM employees
+    ORDER BY first_name ASC, last_name DESC;
+
+    SELECT * FROM customers
+    ORDER BY LENGTH(name) DESC;
+
+    SELECT * FROM employees
+    WHERE first_name ILIKE 'K%'
+    ORDER BY hire_date
+    
 
 ### Date & Timezones
     https://www.w3schools.com/Sql/sql_dates.asp
@@ -123,8 +142,7 @@ quick note SQL statement and query are the same
 
     DATE_TRUNC()
         SELECT DATE_TRUNC('year', date '1992/11/13');
-        
-    
+          
 ### NULL
     IS
         a keyword that we can use to filter NULL. other comparison operators cannot Filtering.
@@ -135,6 +153,13 @@ quick note SQL statement and query are the same
     
 ### Three-Valued Logic
     Besides TRUE and FALSE, the result or logical expressions can also be UNKNOWN
+
+### DISTINCT keyword
+    https://www.w3schools.com/sql/sql_distinct.asp
+    Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.
+    
+    SELECT DISTINCT column1, column2, ...
+    FROM table_name;
 
 ### Commenting
 
