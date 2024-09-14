@@ -67,14 +67,17 @@ testing query: https://www.db-fiddle.com/f/ogAiTgZPjwvDxwVHiVK3Ek/0
     
         - A database is being used to drive statistics for reporting to the executives.
 
-# QUERY Syntax
+# Data Query Language (DQL) Syntax
+    used to retrieve information from databases and perform queries on data contained in schema objects.
+    
+    E.X.
     1) Renaming a columns
     SELECT column as 'new name'
     
     2) CONCAT() you can CONCAT(text1, text2) or CONCAT(column1, column2)
     SELECT CONCAT(emp_no, ' is a ', title) AS "Employee Title" FROM titles
 
-### Function in query syntax
+### Function 
     1) Aggregate function run all of the data and produce one output. Like SUM()
     2) Scalar function run each individual row and produce multiple output. Like CONCAT()
 
@@ -107,13 +110,44 @@ testing query: https://www.db-fiddle.com/f/ogAiTgZPjwvDxwVHiVK3Ek/0
     WHERE first_name ILIKE 'K%'
     ORDER BY hire_date
 
-### Multi Table SELECT
+### JOIN Table
     SELECT a.emp_no, b.salary FROM employees as a, salaries As b
     WHERE a.emp_no = b.emp_no
     ORDER BY a.emp_no
+    The most common approach to join data is link primary key to foreign key.
 
-    As we can see the most common approach to join data is link primary key to foreign key.
+    INNER JOIN keyword (https://www.w3schools.com/sql/sql_join_inner.asp)
+    SELECT a.emp_no, b.salary FROM employees as a
+    INNER JOIN salaries as b ON b.emp_no = a.emp_no
+    THE INNER JOIN SYNTAX considered as a best practice. More readable and exatcly show you what's being joined
+    E.X. Want to know THE ORIGINAL SALARY and also know salary at a promotion
+    SELECT a.emp_no, b.salary, c.title, c.from_date AS "promoted On" FROM employees AS a
+    INNER JOIN salaries AS b ON a.emp_no = b.emp_no
+    INNER JOIN titles AS c ON c.emp_no = a.emp_no 
+    AND(
+        b.from_date = c.from_date
+        OR 
+        c.from_date = (b.from_date + INTERVAL '2 days')
+    )
+    ORDER BY a.emp_no;
 
+    OUTER JOIN keyword   add the data that don't have a match either LEFT, RIGHT, FULL  https://www.w3schools.com/Sql/sql_join_left.asp
+    E.X. find all the employee that is also a manager.
+    SELECT emp.emp_no, dep.emp_no
+    FROM employees AS emp
+    LEFT JOIN dept_manager AS dep ON emp.emp_no = dep.emp_no
+    WHERE dep.emp_no IS NOT NULL
+    E.X. find every salary raise and also know which ones were a promotion.
+    SELECT a.emp_no, b.salary, c.title FROM employees AS a
+    INNER JOIN salaries AS b ON a.emp_no = b.emp_no
+    LEFT JOIN titles AS c ON c.emp_no = a.emp_no 
+    AND(
+        b.from_date = c.from_date
+        OR 
+        c.from_date = (b.from_date + INTERVAL '2 days')
+    )
+    ORDER BY a.emp_no;
+    
 ### Date & Timezones
     https://www.w3schools.com/Sql/sql_dates.asp
     
