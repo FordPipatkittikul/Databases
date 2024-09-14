@@ -147,6 +147,9 @@ testing query: https://www.db-fiddle.com/f/ogAiTgZPjwvDxwVHiVK3Ek/0
         c.from_date = (b.from_date + INTERVAL '2 days')
     )
     ORDER BY a.emp_no;
+
+    CROSS JOIN     Create a combination of every row
+    https://s33046.pcdn.co/wp-content/uploads/2020/02/sql-cross-join-working-principle.png
     
 ### Date & Timezones
     https://www.w3schools.com/Sql/sql_dates.asp
