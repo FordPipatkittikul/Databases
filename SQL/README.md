@@ -5,10 +5,10 @@ SQL is a devlarative language(langauage that we are stating what will happen)
 testing query: https://www.db-fiddle.com/f/ogAiTgZPjwvDxwVHiVK3Ek/0
 
 # Schema
-defines the structure of the database. It includes the definitions of tables, columns, data types, indexes, views, and other database objects.
+    defines the structure of the database. It includes the definitions of tables, columns, data types, indexes, views, and other database objects.
 
 # QUERY BREAKDOWN
-quick note SQL statement and query are the same
+    quick note SQL statement and query are the same
 
 ![QUERY](<query breakdown.png>)
 
@@ -17,12 +17,10 @@ quick note SQL statement and query are the same
 # Relational Model
 
 ### Tables
-
     tables is representation of that object. It is collection of columns and rows
 ![Tables](table.png)
 
 ### Column
-
     Each column represent specific type of data.
 
     Degree : collection of columns.
@@ -31,7 +29,6 @@ quick note SQL statement and query are the same
 ![Column](Columns.png)
 
 ### Row
-
     Each of single row is a piece of data that represent one single piece data of that table
 
     Some people call tuple(It is basiclly row)
@@ -43,37 +40,34 @@ quick note SQL statement and query are the same
 
 
 ### Primary key
-
     Primary key is something that uniquely identifies data.
 
 ### Foriegn key
-
     Foriegn key references the primary key of a different table.
 
 ![alt text](key.png)
 
 # How we use database
 
-1) `OLTP(online transaction processing)`
-
-    For a day to day transactional for driving business. E.X. Amazon what this user's order, order's history, his card number.
-
-    E.X.
+    1) `OLTP(online transaction processing)`
     
-    - A database is being used to log orders and customers.
-
-2) `OLAP(online analytical processing)`
-
-    For future decision. A separate database that connects to the data warehouse being making analytical on it so we can think how to improve our product, website in future.
-
-    E.X.
-
-    - A database is being used to figure out what new products we should offer.
-
-    - A database is being used to drive statistics for reporting to the executives.
+        For a day to day transactional for driving business. E.X. Amazon what this user's order, order's history, his card number.
+    
+        E.X.
+        
+        - A database is being used to log orders and customers.
+    
+    2) `OLAP(online analytical processing)`
+    
+        For future decision. A separate database that connects to the data warehouse being making analytical on it so we can think how to improve our product, website in future.
+    
+        E.X.
+    
+        - A database is being used to figure out what new products we should offer.
+    
+        - A database is being used to drive statistics for reporting to the executives.
 
 # QUERY Syntax
-
     1) Renaming a columns
     SELECT column as 'new name'
     
@@ -81,7 +75,6 @@ quick note SQL statement and query are the same
     SELECT CONCAT(emp_no, ' is a ', title) AS "Employee Title" FROM titles
 
 ### Function in query syntax
-
     1) Aggregate function run all of the data and produce one output. Like SUM()
     2) Scalar function run each individual row and produce multiple output. Like CONCAT()
 
@@ -97,7 +90,7 @@ quick note SQL statement and query are the same
     -- when we do filtering when we do where cause. There is an order of filtering
 ![Screenshot (131)](https://github.com/user-attachments/assets/9e3e27f8-de58-42e9-8ab3-728018d8ac48)
 
-### soritng data
+### sorting data
     SELECT * FROM customers
     ORDER BY <column> ASC;
 
@@ -113,7 +106,11 @@ quick note SQL statement and query are the same
     SELECT * FROM employees
     WHERE first_name ILIKE 'K%'
     ORDER BY hire_date
-    
+
+### Multi Table SELECT
+    SELECT a.emp_no, b.salary FROM employees as a, salaries As b
+    WHERE a.emp_no = b.emp_no
+    ORDER BY a.emp_no
 
 ### Date & Timezones
     https://www.w3schools.com/Sql/sql_dates.asp
@@ -162,7 +159,6 @@ quick note SQL statement and query are the same
     FROM table_name;
 
 ### Commenting
-
      --select statement to filter Mayumi Schueller
     SELECT first_name,last_name AS "Full Name" FROM employees
     /*
@@ -172,5 +168,4 @@ quick note SQL statement and query are the same
     WHERE first_name = 'Mayumi' AND last_name = 'Schueller';
     
 ### Common mistakes
-
      ' ' for you to write TEXT in sql, " " is for TABLES. 
