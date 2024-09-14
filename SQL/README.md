@@ -98,12 +98,33 @@ quick note SQL statement and query are the same
 
 ### Date & Timezones
     https://www.w3schools.com/Sql/sql_dates.asp
+    
     DATE
         convert a date to a date format. 
-        SELECT DATE '1800/01/01'
+        SELECT DATE '1800/01/01';
+        
     Intervals: https://www.javatpoint.com/mysql-interval
         It can store and manipulate a period of time in Years, Months, Days, Hours, Minutes, Seconds.
+        SELECT * FROM employees
+        WHERE AGE(birth_date) > INTERVAL '60 years';
+    
+    EXTRACT() https://www.w3schools.com/sql/func_mysql_extract.asp
+        SELECT EXTRACT(MONTH FROM DATE '2017-06-15');
+
+    now()  https://www.w3schools.com/sql/func_mysql_now.asp
         
+    SELECT NOW()::date;   
+    SELECT CURRENT_DATE;
+        a way to get current day in date format.
+        SELECT TO_CHAR(CURRENT_DATE, 'dd/mm/yyyy');
+
+    AGE()
+        we have to make sure something that passed into AGE() parameter is date data type not something else.
+
+    DATE_TRUNC()
+        SELECT DATE_TRUNC('year', date '1992/11/13');
+        
+    
 ### NULL
     IS
         a keyword that we can use to filter NULL. other comparison operators cannot Filtering.
