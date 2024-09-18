@@ -197,6 +197,16 @@ testing query: https://www.db-fiddle.com/f/ogAiTgZPjwvDxwVHiVK3Ek/0
     SELECT DISTINCT column1, column2, ...
     FROM table_name;
 
+### GROUP BY keyword
+
+    When we use "GROUP BY" we apply the function per group, not on the entire data set.
+    !!! Every column not in the GROUP-BY clause nust apply a function.
+    
+    SELECT  dept_no,COUNT(emp_no)  FROM dept_emp
+    GROUP BY dept_no
+![Screenshot (132)](https://github.com/user-attachments/assets/48f94113-c518-4c66-a2d2-79c2fea1559c)
+
+
 ### Commenting
      --select statement to filter Mayumi Schueller
     SELECT first_name,last_name AS "Full Name" FROM employees
